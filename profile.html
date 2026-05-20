@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile + Quiz Game</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/736x/40/73/1e/40731e287f0bc5dc224d93cc99fca10a.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* overlay biar teks jelas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    /* 🔥 FIX: animasi benar-benar di tengah quiz */
+    #quiz {
+      position: relative;
+    }
+
+    #result-animation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      font-size: 50px;
+      font-weight: bold;
+      display: none;
+      z-index: 10;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .correct {
+      color: #00ff88;
+    }
+
+    .wrong {
+      color: #ff4d4d;
+    }
+
+    #quiz img {
+      border-radius: 15px;
+      margin-bottom: 20px;
+      max-width: 250px;
+    }
+
+    #quiz button {
+      width: 220px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a href="landing.html" class="btn btn-light btn-sm">Back</a>
+  </div>
+</nav>
+
+<div class="container mt-5 text-center bg-white p-4 rounded shadow">
+
+  <h2>My Profile</h2>
+
+  <div class="card mx-auto mt-3" style="width: 18rem;">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYYsqkXA5HzTg3M1ZKTIwhGZOyrPM_GDl1SQ&s"
+      class="card-img-top"
+      alt="Profile"
+    >
+
+    <div class="card-body">
+      <h5 class="card-title" id="playerName">Nama Kamu</h5>
+      <p class="card-text">Pelajar / Developer</p>
+
+      <input
+        type="text"
+        id="nameInput"
+        class="form-control mt-3"
+        placeholder="Masukkan nama kamu"
+      >
+
+      <button
+        class="btn btn-success mt-3"
+        onclick="setName()"
+      >
+        Simpan Nama
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h4>Total Score</h4>
+    <p>Score: <span id="score">0</span> / 10</p>
+  </div>
+
+  <div class="mt-5">
+    <h3>Quiz Tebak Karakter</h3>
+
+    <!-- 🔥 penting: quiz container -->
+    <div id="quiz" class="mt-4"></div>
+
+    <!-- 🔥 animasi overlay -->
+    <div id="result-animation"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
