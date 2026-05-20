@@ -26,6 +26,18 @@
       max-width: 250px;
       margin-bottom: 20px;
     }
+
+    .contact-section {
+      padding: 60px 0;
+      background: #ffffff;
+    }
+
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
   </style>
 </head>
 
@@ -35,9 +47,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">MyWebsite</a>
+
     <div>
-      <a href="index.html" class="btn btn-outline-light btn-sm">Home</a>
-      <a href="profile.html" class="btn btn-outline-light btn-sm">Profile</a>
+      <a href="index.html" class="btn btn-outline-light btn-sm">
+        Home
+      </a>
+      <a href="profile.html" class="btn btn-outline-light btn-sm">
+        Profile
+      </a>
     </div>
   </div>
 </nav>
@@ -45,28 +62,111 @@
 <!-- Hero -->
 <div class="hero d-flex align-items-center text-center">
   <div class="container">
-    <h1 class="display-5">Welcome to Bikini Bottom</h1>
-    <p class="lead">Okay, let's meet SpongeBob together</p>
-    <a href="profile.html" class="btn btn-light">Lihat Profile</a>
+    <h1 class="display-5">
+      Welcome to Bikini Bottom
+    </h1>
+
+    <p class="lead">
+      Okay, let's meet SpongeBob together
+    </p>
+
+    <a href="profile.html" class="btn btn-light">
+      Lihat Profile
+    </a>
   </div>
 </div>
 
 <!-- Section Game -->
 <section class="section-game">
   <div class="container">
-    
-    <!-- Gambar -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2enxJdM14gFMens8tqsit36-5F1BSr_XvNw&s" 
-         class="img-fluid game-img" 
-         alt="Spongebob">
+
+    <img 
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2enxJdM14gFMens8tqsit36-5F1BSr_XvNw&s"
+      class="img-fluid game-img"
+      alt="Spongebob"
+    >
 
     <h2 class="mb-4">
       Hello Everyone, I'm Spongebob, I will introduce my friends in Bikini Bottom
     </h2>
-    <p class="mb-4">Ready GO!!!</p>
-    <a href="profile.html" class="btn btn-primary btn-lg">Get Started</a>
+
+    <p class="mb-4">
+      Ready GO!!!
+    </p>
+
+    <a href="profile.html" class="btn btn-primary btn-lg">
+      Get Started
+    </a>
   </div>
 </section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <h2 class="text-center mb-5">
+      Contact Us
+    </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <form>
+          <div class="mb-3">
+            <label class="form-label">
+              Name
+            </label>
+
+            <input 
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+            >
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">
+              Email
+            </label>
+
+            <input 
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+            >
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">
+              Message
+            </label>
+
+            <textarea 
+              class="form-control"
+              rows="4"
+              placeholder="Write your message">
+            </textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="mb-0">
+      © 2026 MyWebsite | Welcome to Bikini Bottom 🌊
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
