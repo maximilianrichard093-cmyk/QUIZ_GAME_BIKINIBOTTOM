@@ -12,7 +12,18 @@
   <style>
     .hero {
       height: 70vh;
-      background: linear-gradient(to right, #0d6efd, #6610f2);
+
+      /* Background gambar */
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('https://image.idn.media/post/20250603/magen-43da29a867d49c1f351ac6b665d26419-0574d2e9e9da0236f17e20c27bb08b76.jpg');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       color: white;
     }
 
@@ -52,6 +63,7 @@
       <a href="index.html" class="btn btn-outline-light btn-sm">
         Home
       </a>
+
       <a href="profile.html" class="btn btn-outline-light btn-sm">
         Profile
       </a>
@@ -62,7 +74,8 @@
 <!-- Hero -->
 <div class="hero d-flex align-items-center text-center">
   <div class="container">
-    <h1 class="display-5">
+
+    <h1 class="display-5 fw-bold">
       Welcome to Bikini Bottom
     </h1>
 
@@ -70,9 +83,10 @@
       Okay, let's meet SpongeBob together
     </p>
 
-    <a href="profile.html" class="btn btn-light">
+    <a href="profile.html" class="btn btn-light btn-lg">
       Lihat Profile
     </a>
+
   </div>
 </div>
 
@@ -97,6 +111,7 @@
     <a href="profile.html" class="btn btn-primary btn-lg">
       Get Started
     </a>
+
   </div>
 </section>
 
@@ -112,6 +127,7 @@
       <div class="col-md-6">
 
         <form>
+
           <div class="mb-3">
             <label class="form-label">
               Name
@@ -151,6 +167,7 @@
           <button type="submit" class="btn btn-primary w-100">
             Send Message
           </button>
+
         </form>
 
       </div>
